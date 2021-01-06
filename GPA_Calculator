@@ -1,0 +1,160 @@
+import java.util.*;
+/**
+ * Write a description of class WillYouMakeTheGrade here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class WillYouMakeTheGrade
+{
+    public static void main(String args[])
+       {
+       Scanner kb = new Scanner (System.in);
+       System.out.print("What are your grades?");
+       String answer = kb.nextLine();
+       answer = answer.toUpperCase();
+       
+       double A = 4;
+       double B = 3;
+       double C = 2;
+       double D = 1;
+       double F = 0;
+       double finalgrade = 0.0;
+       String grade1 = answer.substring(0,1);
+       String grade2 = answer.substring(1,2);
+       String grade3 = answer.substring(2,3);
+       String grade4 = answer.substring(3,4);
+       String grade5 = answer.substring(4,5);
+       String grade6 = answer.substring(5,6);
+       if (grade1.equals ("A")){
+           finalgrade =  finalgrade + A;
+       } 
+       else if (grade1.equals ("B"))
+       {
+            finalgrade =  finalgrade + B;
+       }
+       else if (grade1.equals ("C"))
+       {
+            finalgrade =  finalgrade + C;
+       }
+       else if (grade1.equals ("D"))
+       {
+            finalgrade =  finalgrade + D;
+       }
+       else if (grade1.equals ("F"))
+       {
+            finalgrade =  finalgrade + F;
+       }
+       
+       if (grade2.equals ("A")){
+           finalgrade =  finalgrade + A;
+       } 
+       else if (grade2.equals ("B"))
+       {
+            finalgrade =  finalgrade + B;
+       }
+       else if (grade2.equals ("C"))
+       {
+            finalgrade =  finalgrade + C;
+       }
+       else if (grade2.equals ("D"))
+       {
+            finalgrade =  finalgrade + D;
+       }
+       else if (grade2.equals ("F"))
+       {
+            finalgrade =  finalgrade + F;
+       }
+       
+       if (grade3.equals ("A")){
+           finalgrade =  finalgrade + A;
+       } 
+       else if (grade3.equals ("B"))
+       {
+            finalgrade =  finalgrade + B;
+       }
+       else if (grade3.equals ("C"))
+       {
+            finalgrade =  finalgrade + C;
+       }
+       else if (grade3.equals ("D"))
+       {
+            finalgrade =  finalgrade + D;
+       }
+       else if (grade3.equals ("F"))
+       {
+            finalgrade =  finalgrade + F;
+       }
+       
+       if (grade4.equals ("A")){
+           finalgrade =  finalgrade + A;
+       } 
+       else if (grade4.equals ("B"))
+       {
+            finalgrade =  finalgrade + B;
+       }
+       else if (grade4.equals ("C"))
+       {
+            finalgrade =  finalgrade + C;
+       }
+       else if (grade4.equals ("D"))
+       {
+            finalgrade =  finalgrade + D;
+       }
+       else if (grade4.equals ("F"))
+       {
+            finalgrade =  finalgrade + F;
+       }
+       
+       if (grade5.equals ("A")){
+           finalgrade =  finalgrade + A;
+       } 
+       else if (grade5.equals ("B"))
+       {
+            finalgrade =  finalgrade + B;
+       }
+       else if (grade5.equals ("C"))
+       {
+            finalgrade =  finalgrade + C;
+       }
+       else if (grade5.equals ("D"))
+       {
+            finalgrade =  finalgrade + D;
+       }
+       else if (grade5.equals ("F"))
+       {
+            finalgrade =  finalgrade + F;
+       }
+       
+       if (grade6.equals ("A")){
+           finalgrade =  finalgrade + A;
+       } 
+       else if (grade6.equals ("B"))
+       {
+            finalgrade =  finalgrade + B;
+       }
+       else if (grade6.equals ("C"))
+       {
+            finalgrade =  finalgrade + C;
+       }
+       else if (grade6.equals ("D"))
+       {
+            finalgrade =  finalgrade + D;
+       }
+       else if (grade6.equals ("F"))
+       {
+            finalgrade =  finalgrade + F;
+       }
+
+       if (finalgrade < 2.0){
+          System.out.println("Your GPA is: ");
+          System.out.println(finalgrade/6);
+          System.out.println("You did not pass the grade.");
+        } else{
+         System.out.println("You successfully passed the grade!");
+         System.out.println("Your GPA is: ");       
+         System.out.println(finalgrade/6);
+        }
+       
+    }
+}
