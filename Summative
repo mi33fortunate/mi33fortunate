@@ -1,0 +1,79 @@
+import java.util.*;
+/**
+ * Write a description of class Unit1 here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class Unit1
+{
+    public static void main(String args[])
+       {
+           //Question 1
+       Scanner kb = new Scanner (System.in);
+       System.out.println("Give me a number");
+       String answer = kb.nextLine();
+      int num = Integer.parseInt(answer);
+      if ((num%5)==0){
+          System.out.println("This number is a multiple of 5.");
+        }else{
+          System.out.println("What has to be broken before you can use it?");
+        }
+        
+        //Question 2
+        System.out.println("Give me another number");
+        String numb = kb.nextLine();
+        double gradePointAverage = Integer.parseInt(numb);
+        double plusOne = gradePointAverage+1;
+        System.out.println(plusOne);
+        
+        //Question 3
+        String name = "Beck";
+        System.out.println(name.substring(0,1) + (" is the first letter of Beck"));
+        
+        //Question 4
+        System.out.println("Give me a set of 10 letters");
+        String letters = kb.nextLine();
+        int length = letters.length();
+        
+       String odd1 = answer.substring(0,1);
+       String odd3 = answer.substring(2,3);
+       String odd5 = answer.substring(4,5);
+       String odd7 = answer.substring(6,7);
+       String odd9 = answer.substring(8,9);
+       
+       System.out.println(odd1+odd3+odd5+odd7+odd9);
+        
+       
+       //Question 5
+       System.out.println("Give me a word");
+        String one = kb.nextLine();
+        String onee = one.toLowerCase();
+        System.out.println("Give me another word");
+        String two = kb.nextLine();
+        String twoo = two.toLowerCase();
+       
+       String letterthree1 = one.substring(2,3);
+       String letterthree2 = two.substring(2,3);
+       int L1 = (int) letterthree1.charAt(0);
+       int L2 = (int) letterthree2.charAt(0);
+       if (L1<L2){
+           System.out.println(one);
+           System.out.println(two);
+        } else if (L1>L2){
+        System.out.println(two);
+           System.out.println(one);
+        }
+        
+        //Question 6
+        
+        System.out.println("Give me a word");
+        String finalone = kb.nextLine();
+        String b = "";
+        int finallength = finalone.length();
+        if (finallength != 6){
+            System.out.println("This word does not have 6 letters");
+        }
+    
+    }
+}
