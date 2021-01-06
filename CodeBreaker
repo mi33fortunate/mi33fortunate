@@ -1,0 +1,74 @@
+import java.util.*;
+/**
+ * Write a description of class CodeBreaker here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class CodeBreaker
+{
+    public static void main(String args[])
+       {
+          
+
+       Scanner kb = new Scanner (System.in);
+       int i = 0;
+       int b = 0;
+       
+       int c = 1 + (int) (Math.random() * ((8-0) + 1) );
+       int c2 = 1 + (int) (Math.random() * ((8-0) + 1) );
+       int c3 = 1 + (int) (Math.random() * ((8-0) + 1) );
+       int c4 = 1 + (int) (Math.random() * ((8-0) + 1) );
+  
+           
+           String num1=c+"";
+           String num2=c2+"";
+           String num3=c3+"";
+           String num4=c4+"";
+           
+          
+           for(i = 0; i<12; i++){
+           
+           System.out.println("Enter a 4 digit code.");
+           String a = kb.nextLine();
+           String user = a;
+           String one = a.substring(0,1);
+           String two = a.substring(1,2);
+           String three = a.substring(2,3);
+           String four = a.substring(3,4);
+       
+           
+           
+           
+            if(one.equals(num1)){
+                System.out.println("The first digit is right");
+           }else{
+               System.out.println("The first digit is wrong");
+            }
+            if(two.equals(num2)){
+                System.out.println("The second digit is right");
+           }else{
+               System.out.println("The second digit is wrong");
+            }
+            if(three.equals(num3)){
+                System.out.println("The third digit is right");
+           }else{
+               System.out.println("The third digit is wrong");
+            }
+             if(four.equals(num4)){
+                System.out.println("The fourth digit is right");
+           }else{
+               System.out.println("The fourth digit is wrong");
+            }
+            
+            if ((one.equals(num1))&&(two.equals(num2))&&(three.equals(num3))&&(four.equals(num4))){
+                System.out.println("You are correct!");
+                break;
+            }
+            if(!(((one.equals(num1))&&(two.equals(num2))&&(three.equals(num3))&&(four.equals(num4))))){
+                System.out.println("You lost and failed to guess my code.");
+            }
+           
+        }
+    }
+}
