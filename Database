@@ -1,0 +1,448 @@
+import java.util.*;
+/**
+ * Write a description of class LBD here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class LBD
+{
+     public static void main(String args[])
+       {
+       Scanner kb = new Scanner (System.in); //new scanner to record what the user inputs
+       //first thing that is showing up when the program is initiated
+       System.out.println("=======================================================================================");
+       System.out.println("=======================================================================================");
+       System.out.println("===========================       Library Database       ==============================");
+       System.out.println("=======================================================================================");
+       System.out.println("=======================================================================================");
+       System.out.println("=========================== 1. View Entire Database       =============================");
+       System.out.println("=========================== 2. Display Title of One Index =============================");
+       System.out.println("=========================== 3. Change Title of One Index  =============================");
+       System.out.println("=========================== 4. Grocery Shopping           =============================");
+       System.out.println("=========================== 5. Times Tables               =============================");
+       System.out.println("=========================== 6. Quit                       =============================");
+       System.out.println("=======================================================================================");
+       
+       
+       //number 2 imput string
+       String show;
+       
+       //number 3 imput string
+       String book;//Book change title
+       
+       String book1;//book title
+       String book2;//book title
+       String book3;//book title
+       String book4;//book title
+       String book5;//book title
+       
+       //number 4 imput strings and doubles
+       String a;
+       String b;
+       String c;
+       String d;
+       String e;
+       String item1;
+       String price1;
+       double total1;
+       String item2;
+       String price2;
+       double total2;
+       String item3;
+       String price3;
+       double total3;
+       String item4;
+       String price4;
+       double total4;
+       String item5;
+       String price5;
+       double total5;
+       
+       //number 5 imput strings and doubles
+       String answer;
+       String number;
+       double numbers;
+       double aa;
+       double bb;
+       double cc;
+       double dd;
+       double ee;
+       double ff;
+       double gg;
+       double hh;
+       double ii;
+       double jj;
+       double kk;
+       double ll;
+       
+       //all arrays are listed here
+       
+       //the main array which takes the user around the program using their answers.
+       String[] nums = {"1", "2", "3", "4", "5", "6"};
+       
+       //book list array
+       String[] books = {"1. Pride and Prejudice", "2. To Kill a Mockingbird", "3. Lord of the Rings", "4. War and Peace", "5. Invisible Man", "6. Quit"};
+       
+       //Shopping list arrays
+       String[] items = {"N/A", "N/A", "N/A", "N/A", "N/A"};
+       String[] prices = {"0", "0", "0", "0", "0",};
+       double[] total = {0, 0, 0, 0, 0};
+       
+       //times tables array
+       int[] multiples = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+       
+       String num = kb.nextLine();   //num is the settings and all the options on the first set of options given
+       
+       while(!num.equals(nums[5])){  //while the user does not input 6 into the num, the program will run for as long as the person needs it to
+           //if the user presses 6, then the code will end 
+       
+           if(num.equals(nums[0])){ //if user inputs 1 aka view entire database, then the list of books within the library will show up
+               System.out.println("=======================================================================================");
+               System.out.println("=======================================================================================");
+               System.out.println("===========================       Library Database       ==============================");
+               System.out.println("=======================================================================================");
+               System.out.println("=======================================================================================");
+               // the above will be everywhere throughout the program
+               System.out.println(books[0]); //Pride and Prejudice
+               System.out.println(books[1]); //To Kill a Mockingbird
+               System.out.println(books[2]); //Lord of the Rings
+               System.out.println(books[3]); //War and Peace
+               System.out.println(books[4]); //Invisible Man
+               System.out.println(books[5]); //Quit
+                   //name of the books
+                    num = kb.nextLine();
+            }
+           
+            if(num.equals(nums[1])){ //if user imputs 2 then this code will run
+                System.out.println("=======================================================================================");
+               System.out.println("=======================================================================================");
+               System.out.println("===========================       Library Database       ==============================");
+               System.out.println("=======================================================================================");
+               System.out.println("=======================================================================================");
+                System.out.println("Which Book Title Would You Like to Display? (1, 2, 3, 4, 5)");
+                show = kb.nextLine(); //show is what the program will display after the user imputs into the code
+                if(show.equals("1")){  //if the user imputs this number, then the first book on the list will be the output
+                   System.out.println(books[0]);
+                }
+                if(show.equals("2")){  //if the user imputs this number, then the second book on the list will be the output
+                   System.out.println(books[1]);
+                }
+                if(show.equals("3")){  //if the user imputs this number, then the third book on the list will be the output
+                   System.out.println(books[2]);
+                }
+                if(show.equals("4")){  //if the user imputs this number, then the fourth book on the list will be the output
+                   System.out.println(books[3]);
+                }
+                if(show.equals("5")){  //if the user imputs this number, then the fifth book on the list will be the output
+                   System.out.println(books[4]);
+                }
+                System.out.println("=======================================================================================");
+                    System.out.println("=======================================================================================");
+                    System.out.println("===========================       Library Database       ==============================");
+                    System.out.println("=======================================================================================");
+                    System.out.println("=======================================================================================");
+                    System.out.println("=========================== 1. View Entire Database       =============================");
+                    System.out.println("=========================== 2. Display Title of One Index =============================");
+                    System.out.println("=========================== 3. Change Title of One Index  =============================");
+                    System.out.println("=========================== 4. Grocery Shopping           =============================");
+                    System.out.println("=========================== 5. Times Tables               =============================");
+                    System.out.println("=========================== 6. Quit                       =============================");
+                    System.out.println("=======================================================================================");
+                    num = kb.nextLine(); //System prints original page of the Database
+            }
+            
+           if(num.equals(nums[2])){ //if user imputs 3
+               System.out.println("=======================================================================================");
+               System.out.println("=======================================================================================");
+               System.out.println("===========================       Library Database       ==============================");
+               System.out.println("=======================================================================================");
+               System.out.println("=======================================================================================");
+               System.out.println("What Book Would You Like To Change The Title Of? (1, 2, 3, 4 or 5)"); 
+               book = kb.nextLine(); //user answers with which book they want to change the title of
+               if(book.equals("1")){ //if user imputs 1, then the user can change the name of the first book
+                   System.out.println("What book would you like to change this title to?");
+                   book1 = "1. " + kb.nextLine(); //changes original book title to what the user wants to imput
+                   books[0]= book1;//updated array with the book title
+                }
+                if(book.equals("2")){ //if user imputs 1, then the user can change the name of the second book
+                   System.out.println("What book would you like to change this title to?");
+                   book2 = "2. " + kb.nextLine(); //changes original book title to what the user wants to imput
+                   books[1]= book2;//updated array with the book title
+                }
+                if(book.equals("3")){ //if user imputs 1, then the user can change the name of the third book
+                   System.out.println("What book would you like to change this title to?");
+                   book3 = "3. " + kb.nextLine(); //changes original book title to what the user wants to imput
+                   books[2]= book3;//updated array with the book title
+                }
+                if(book.equals("4")){ //if user imputs 1, then the user can change the name of the fourth book
+                   System.out.println("What book would you like to change this title to?");
+                   book4 = "4. " + kb.nextLine(); //changes original book title to what the user wants to imput
+                   books[3]= book4;//updated array with the book title
+                }
+                if(book.equals("5")){ //if user imputs 1, then the user can change the name of the fifth book
+                   System.out.println("What book would you like to change this title to?");
+                   book5 = "5. " + kb.nextLine(); //changes original book title to what the user wants to imput
+                   books[4]= book5; //updated array with the book title
+                }
+                
+                    System.out.println("=======================================================================================");
+                    System.out.println("=======================================================================================");
+                    System.out.println("===========================       Library Database       ==============================");
+                    System.out.println("=======================================================================================");
+                    System.out.println("=======================================================================================");
+                    System.out.println(books[0]); //updated or original book title
+                    System.out.println(books[1]);//updated or original book title
+                    System.out.println(books[2]);//updated or original book title
+                    System.out.println(books[3]);//updated or original book title
+                    System.out.println(books[4]);//updated or original book title
+                    System.out.println(books[5]);//updated or original book title
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
+                    System.out.println("=======================================================================================");
+                    System.out.println("===========================       Library Database       ==============================");
+                    System.out.println("=======================================================================================");
+                    System.out.println("=======================================================================================");
+                    System.out.println("=========================== 1. View Entire Database       =============================");
+                    System.out.println("=========================== 2. Display Title of One Index =============================");
+                    System.out.println("=========================== 3. Change Title of One Index  =============================");
+                    System.out.println("=========================== 4. Grocery Shopping           =============================");
+                    System.out.println("=========================== 5. Times Tables               =============================");
+                    System.out.println("=========================== 6. Quit                       =============================");
+                    System.out.println("=======================================================================================");
+                 num = kb.nextLine();   
+                 //the output of this will display the new list of books and the Library Database original screen
+            }
+           
+           if(num.equals(nums[3])){
+                System.out.println("=======================================================================================");
+                    System.out.println("=======================================================================================");
+                    System.out.println("===========================       Grocery Shopping       ==============================");
+                    System.out.println("=======================================================================================");
+                    System.out.println("=======================================================================================");
+               System.out.println("Do you have to purchase an item? (yes or no)");
+               a = kb.nextLine(); //user imputs yes or no 
+               a = a.toLowerCase(); //puts the persons answer to lowercase
+            
+               if(a.equals("yes")){ //if user imputs yes do the things in the if statement
+                  System.out.println("What is your item?");
+               
+                 item1 = kb.nextLine();//user imputs item
+                 items[0] = item1;
+                 System.out.println("Your first item is: "+ items[0]);
+    
+                 System.out.print("What is the price?");//user imputs price
+                 price1 = kb.nextLine();
+                 prices[0] = price1;
+                 total[0] = Double.parseDouble(prices[0]);
+                 System.out.println("The price is $" + prices[0]);
+                 
+                  System.out.println("Do you have to purchase an item?");
+               b = kb.nextLine();
+               b = b.toLowerCase();
+            
+               if(b.equals("yes")){ //if user imputs yes do the things in the if statement
+                  System.out.println("What is your item?");
+               
+                 item2 = kb.nextLine();//user imputs item
+                 items[1] = item2;
+                 System.out.println("Your first item is: "+ items[1]);
+    
+                 System.out.print("What is the price?");
+                 price2 = kb.nextLine();//user imputs price
+                 prices[1] = price2;
+                 total[1] = Double.parseDouble(prices[1]);
+                 System.out.println("The price is $" + prices[1]);
+                 
+                 System.out.println("Do you have to purchase an item?");
+               c = kb.nextLine();
+               c = c.toLowerCase();
+            
+               if(c.equals("yes")){//if user imputs yes do the things in the if statement
+                  System.out.println("What is your item?");
+               
+                 item3 = kb.nextLine();//user imputs item
+                 items[2] = item3;
+                 System.out.println("Your first item is: "+ items[2]);
+    
+                 System.out.print("What is the price?");
+                 price3 = kb.nextLine();//user imputs price
+                 prices[2] = price3;
+                 total[2] = Double.parseDouble(prices[2]);
+                 System.out.println("The price is $" + prices[2]);
+                 
+                 System.out.println("Do you have to purchase an item?");
+               d = kb.nextLine();
+               d = d.toLowerCase();
+            
+               if(d.equals("yes")){//if user imputs yes do the things in the if statement
+                  System.out.println("What is your item?");
+               
+                 item4 = kb.nextLine();//user imputs item
+                 items[3] = item4;
+                 System.out.println("Your first item is: "+ items[3]);
+    
+                 System.out.print("What is the price?");
+                 price4 = kb.nextLine();//user imputs price
+                 prices[3] = price4;
+                 total[3] = Double.parseDouble(prices[3]);
+                 System.out.println("The price is $" + prices[3]);
+                  System.out.println("Do you have to purchase an item?");
+               e = kb.nextLine();
+               e = e.toLowerCase();
+            
+               if(e.equals("yes")){//if user imputs yes do the things in the if statement
+                  System.out.println("What is your item?");
+               
+                 item5 = kb.nextLine(); //user imputs item
+                 items[4] = item5;
+                 System.out.println("Your first item is: "+ items[4]);
+    
+                 System.out.print("What is the price?");
+                 price5 = kb.nextLine();//user imputs price
+                 prices[4] = price5;
+                 total[4] = Double.parseDouble(prices[4]);
+                 System.out.println("The price is $" + prices[4]);
+                 
+                 System.out.println("Item:      Cost:");
+                    System.out.println(items[0] + "     $" + prices[0] + "   Total: $" + (total[0]));
+                    System.out.println(items[1] + "     $" + prices[1] + "   Total: $" + (total[0]+total[1]));
+                    System.out.println(items[2] + "     $" + prices[2] + "   Total: $" + (total[0]+total[1]+total[2]));
+                    System.out.println(items[3] + "     $" + prices[3] + "   Total: $" + (total[0]+total[1]+total[2]+total[3]));
+                    System.out.println(items[4] + "     $" + prices[4] + "   Total: $" + (total[0]+total[1]+total[2]+total[3]+total[4]));
+                    //this is the receipt
+                }else if ((e.equals("no"))){ //if user imputs no do the things in the if statement
+                    System.out.println("Item:      Cost:");
+                    System.out.println(items[0] + "     $" + prices[0] + "   Total: $" + (total[0]));
+                    System.out.println(items[1] + "     $" + prices[1] + "   Total: $" + (total[0]+total[1]));
+                    System.out.println(items[2] + "     $" + prices[2] + "   Total: $" + (total[0]+total[1]+total[2]));
+                    System.out.println(items[3] + "     $" + prices[3] + "   Total: $" + (total[0]+total[1]+total[2]+total[3]));
+                    System.out.println(items[4] + "     $" + prices[4] + "   Total: $" + (total[0]+total[1]+total[2]+total[3]+total[4]));
+                    //this is the receipt
+                }
+                }else if ((d.equals("no"))){ //if user imputs no do the things in the if statement
+                    System.out.println("Item:      Cost:");
+                    System.out.println(items[0] + "     $" + prices[0] + "   Total: $" + (total[0]));
+                    System.out.println(items[1] + "     $" + prices[1] + "   Total: $" + (total[0]+total[1]));
+                    System.out.println(items[2] + "     $" + prices[2] + "   Total: $" + (total[0]+total[1]+total[2]));
+                    System.out.println(items[3] + "     $" + prices[3] + "   Total: $" + (total[0]+total[1]+total[2]+total[3]));
+                    System.out.println(items[4] + "     $" + prices[4] + "   Total: $" + (total[0]+total[1]+total[2]+total[3]+total[4]));
+                    //this is the receipt
+                }
+                }else if ((c.equals("no"))){ //if user imputs no do the things in the if statement
+                    System.out.println("Item:      Cost:");
+                    System.out.println(items[0] + "     $" + prices[0] + "   Total: $" + (total[0]));
+                    System.out.println(items[1] + "     $" + prices[1] + "   Total: $" + (total[0]+total[1]));
+                    System.out.println(items[2] + "     $" + prices[2] + "   Total: $" + (total[0]+total[1]+total[2]));
+                    System.out.println(items[3] + "     $" + prices[3] + "   Total: $" + (total[0]+total[1]+total[2]+total[3]));
+                    System.out.println(items[4] + "     $" + prices[4] + "   Total: $" + (total[0]+total[1]+total[2]+total[3]+total[4]));
+                    //this is the receipt
+                }
+                }else if ((b.equals("no"))){
+                    System.out.println("Item:      Cost:");
+                    System.out.println(items[0] + "     $" + prices[0] + "   Total: $" + (total[0]));
+                    System.out.println(items[1] + "     $" + prices[1] + "   Total: $" + (total[0]+total[1]));
+                    System.out.println(items[2] + "     $" + prices[2] + "   Total: $" + (total[0]+total[1]+total[2]));
+                    System.out.println(items[3] + "     $" + prices[3] + "   Total: $" + (total[0]+total[1]+total[2]+total[3]));
+                    System.out.println(items[4] + "     $" + prices[4] + "   Total: $" + (total[0]+total[1]+total[2]+total[3]+total[4]));
+                    //this is the receipt
+                }
+                }else if ((a.equals("no"))){ //if user imputs no do the things in the if statement
+                    System.out.println("Item:      Cost:");
+                    System.out.println(items[0] + "     $" + prices[0] + "   Total: $" + (total[0]));
+                    System.out.println(items[1] + "     $" + prices[1] + "   Total: $" + (total[0]+total[1]));
+                    System.out.println(items[2] + "     $" + prices[2] + "   Total: $" + (total[0]+total[1]+total[2]));
+                    System.out.println(items[3] + "     $" + prices[3] + "   Total: $" + (total[0]+total[1]+total[2]+total[3]));
+                    System.out.println(items[4] + "     $" + prices[4] + "   Total: $" + (total[0]+total[1]+total[2]+total[3]+total[4]));
+                    //this is the receipt
+                }
+               
+        
+                
+                
+               
+                
+                System.out.println("=======================================================================================");
+                System.out.println("=======================================================================================");
+                System.out.println("===========================       Library Database       ==============================");
+                System.out.println("=======================================================================================");
+                System.out.println("=======================================================================================");
+                System.out.println("=========================== 1. View Entire Database       =============================");
+                System.out.println("=========================== 2. Display Title of One Index =============================");
+                System.out.println("=========================== 3. Change Title of One Index  =============================");
+                System.out.println("=========================== 4. Grocery Shopping           =============================");
+                System.out.println("=========================== 5. Times Tables               =============================");
+                System.out.println("=========================== 6. Quit                       =============================");
+                System.out.println("=======================================================================================");
+                num = kb.nextLine();
+                //display the front page of the database
+            }
+           
+            
+            if(num.equals(nums[4])){ //If user imputs 5
+                 System.out.println("=======================================================================================");
+                    System.out.println("=======================================================================================");
+                    System.out.println("===========================         Times Tables         ==============================");
+                    System.out.println("=======================================================================================");
+                    System.out.println("=======================================================================================");
+                System.out.println("Do you want to see the multiples of a number of your choice? (yes or no)");
+               answer = kb.nextLine(); //User responds yes or no
+               answer = answer.toLowerCase(); //convert the answer to lowercase
+                if(answer.equals("yes")){ //if user imputs yes do code below
+                System.out.println("Insert number you would like to see the multiples of. (can be a decimal or whole number)");
+                number = kb.nextLine(); //user imputs any number, decimal or whole
+                numbers = Double.parseDouble(number);
+                aa = numbers * multiples[0]; //number times 1
+                bb = numbers * multiples[1];//number times 2
+                cc = numbers * multiples[2];//number times 3
+                dd = numbers * multiples[3];//number times 4
+                ee = numbers * multiples[4];//number times 5
+                ff = numbers * multiples[5];//number times 6
+                gg = numbers * multiples[6];//number times 7
+                hh = numbers * multiples[7];//number times 8
+                ii = numbers * multiples[8];//number times 9
+                jj = numbers * multiples[9];//number times 10
+                kk = numbers * multiples[10];//number times 11
+                ll = numbers * multiples[11];//number times 12
+                System.out.println(aa); //answer
+                System.out.println(bb);//answer
+                System.out.println(cc);//answer
+                System.out.println(dd);//answer
+                System.out.println(ee);//answer
+                System.out.println(ff);//answer
+                System.out.println(gg);//answer
+                System.out.println(hh);//answer
+                System.out.println(ii);//answer
+                System.out.println(jj);//answer
+                System.out.println(kk);//answer
+                System.out.println(ll);//answer
+                
+                
+                
+              }else if(answer.equals("no")){ //if user imputs no do code below
+                System.out.println("=======================================================================================");
+                System.out.println("=======================================================================================");
+                System.out.println("===========================       Library Database       ==============================");
+                System.out.println("=======================================================================================");
+                System.out.println("=======================================================================================");
+                System.out.println("=========================== 1. View Entire Database       =============================");
+                System.out.println("=========================== 2. Display Title of One Index =============================");
+                System.out.println("=========================== 3. Change Title of One Index  =============================");
+                System.out.println("=========================== 4. Grocery Shopping           =============================");
+                System.out.println("=========================== 5. Times Tables               =============================");
+                System.out.println("=========================== 6. Quit                       =============================");
+                System.out.println("=======================================================================================");
+                num = kb.nextLine();
+                
+                //display original screen
+             }
+           }
+        
+        }
+
+      }
+        
+    }
