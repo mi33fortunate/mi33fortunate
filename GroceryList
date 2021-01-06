@@ -1,0 +1,72 @@
+
+/**
+ * Write a description of class GroceryList here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+import java.util.*;
+public class GroceryList
+{
+public static void main (String args[])
+{
+    Scanner keyboard = new Scanner (System.in);
+    System.out.println("What is the first item?");
+    String item1;
+    item1 = keyboard.nextLine();
+    System.out.println("Your first item is: "+ item1);
+    
+    System.out.print("What is the price?");
+    String price1 = keyboard.nextLine ();
+    Double total1 = Double.parseDouble(price1);
+    System.out.println("The price is $" + price1);
+    
+    System.out.println("What is the second item?");
+    String item2;
+    item2 = keyboard.nextLine();
+    System.out.println("Your second item is: "+ item2);
+    
+    System.out.print("What is the price?");
+    String price2 = keyboard.nextLine ();
+    Double total2 = Double.parseDouble(price2);
+    System.out.println("The price is $" + price2);
+    
+    System.out.println("What is the third item?");
+    String item3;
+    item3 = keyboard.nextLine();
+    System.out.println("Your third item is: "+ item3);
+    
+    System.out.print("What is the price?");
+    String price3 = keyboard.nextLine ();
+    Double total3 = Double.parseDouble(price3);
+    System.out.println("The price is $" + price3);
+    
+    System.out.println("What is the fourth item?");
+    String item4;
+    item4 = keyboard.nextLine();
+    System.out.println("Your fourth item is: "+ item4);
+    
+    System.out.print("What is the price?");
+    String price4 = keyboard.nextLine ();
+    Double total4 = Double.parseDouble(price4);
+    System.out.println("The price is $" + price4);
+    
+    System.out.println("What is the fifth item?");
+    String item5;
+    item5 = keyboard.nextLine();
+    System.out.println("Your fifth item is: "+ item5);
+    
+    System.out.print("What is the price?");
+    String price5 = keyboard.nextLine ();
+    Double total5 = Double.parseDouble(price5);
+    System.out.println("The price is $" + price5);
+    
+    System.out.println("Item:      Cost:");
+    
+    System.out.println(item1 + "     $" + price1 + "Total: $" + (total1));
+    System.out.println(item2 + "     $" + price2 + "Total: $" + (total1+total2));
+    System.out.println(item3 + "     $" + price3 + "Total: $" + (total1+total2+total3));
+    System.out.println(item4 + "     $" + price4 + "Total: $" + (total1+total2+total3+total4));
+    System.out.println(item5 + "     $" + price5 + "Total: $" + (total1+total2+total3+total4+total5));
+}
+}
