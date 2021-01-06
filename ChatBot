@@ -1,0 +1,269 @@
+
+/**
+ * Write a description of class ChatBot here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+import java.util.*;
+public class ChatBot
+{
+public static void main (String args[])
+{
+    Scanner kb = new Scanner (System.in);
+    System.out.print("Enter your password please");
+    String password = "incorrect";
+    String imput;
+    imput = kb.nextLine();
+    imput.toLowerCase();
+    boolean a = true;
+    boolean b  = false;
+    if ((password.equals(imput))== a){
+        System.out.println("Password is correct");
+    }else{
+        System.out.println("Password is incorrect");
+    }
+    
+    System.out.print("Now you need to pass this quiz: ");
+    System.out.print("What is so fragile that even saying its name out loud breaks it?");
+    String correctanswer1 = "silence";
+    String answer1 = kb.nextLine();
+    answer1.toLowerCase();
+    
+    System.out.print("Can you use == for a string in java?");
+    String correctanswer2 = "no";
+    String answer2 = kb.nextLine();
+    answer2.toLowerCase();
+    
+    if ((answer1.equals(correctanswer1)==a) && ((answer2.equals(correctanswer2))==a)){
+        System.out.print("You have successfully passed this test with 100% percent correct!");
+    }else if ((answer1.equals(correctanswer1)==a) || ((answer2.equals(correctanswer2))==b)){
+        System.out.print("You have successfully passed this test with 50% percent correct!");
+    }else if ((answer1.equals(correctanswer1)== b) || ((answer2.equals(correctanswer2))==a)){
+        System.out.print("You have successfully passed this test with 50% percent correct!");
+    }else if((answer1.equals(correctanswer1)== b) || ((answer2.equals(correctanswer2))==b)){
+       System.out.print("You have failed this quiz."); 
+    }
+    
+    
+    System.out.println("What is your name?");
+    String name;
+    name = kb.nextLine();
+    System.out.println(name + " is a nice name!");
+    
+    int letters = name.length();
+    System.out.println("Your name has " + letters + " letters.");
+
+    if (letters != 6){
+        System.out.println("Your name does not have 6 letters");
+        }
+    
+    System.out.println("What year were you born in " + name + "?");
+    String year1 = kb.nextLine();
+    int numyear = Integer.parseInt(year1);
+    int age = 2020 - numyear;
+    System.out.println("you are " + age + " years old");
+    
+    if ((5 <= age) && (age <= 7)){
+        System.out.println(name + ", you are in Lower Elementary");
+        
+    }else if ((8 <= age) && (age <= 10)){
+        System.out.println(name + ", yuou are in Upper Elementary");
+        
+    }else if ((11 <= age) && (age <= 13)){
+        System.out.println(name + ", you are in Middle School");
+        
+    }else if ((14 <= age) && (age <= 17)){
+        System.out.println(name + ", you are in High School");
+        
+    }else if ((18 <= age) && (age <= 25)){
+        System.out.println("You have graduated High School and are in University!!!");
+        
+    }else if (26 <= age){
+        
+        System.out.println(name + ", you have a job and finished all of your schooling!");
+    }else {
+        System.out.println("You are still a baby " + name);
+    }
+    
+    if ((11 <= age) && (age <= 25)){
+    System.out.print("What are your grades? I would like to calculate your GPA");
+       String answer = kb.nextLine();
+       answer = answer.toUpperCase();
+       
+       double A = 4.0;
+       double B = 3.0;
+       double C = 2.0;
+       double D = 1.0;
+       double F = 0.0;
+       double finalgrade = 0.0;
+       String grade1 = answer.substring(0,1);
+       String grade2 = answer.substring(1,2);
+       String grade3 = answer.substring(2,3);
+       String grade4 = answer.substring(3,4);
+       String grade5 = answer.substring(4,5);
+       String grade6 = answer.substring(5,6);
+       if (grade1.equals ("A")){
+           finalgrade =  finalgrade + A;
+       } 
+       else if (grade1.equals ("B"))
+       {
+            finalgrade =  finalgrade + B;
+       }
+       else if (grade1.equals ("C"))
+       {
+            finalgrade =  finalgrade + C;
+       }
+       else if (grade1.equals ("D"))
+       {
+            finalgrade =  finalgrade + D;
+       }
+       else if (grade1.equals ("F"))
+       {
+            finalgrade =  finalgrade + F;
+       }
+       
+       if (grade2.equals ("A")){
+           finalgrade =  finalgrade + A;
+       } 
+       else if (grade2.equals ("B"))
+       {
+            finalgrade =  finalgrade + B;
+       }
+       else if (grade2.equals ("C"))
+       {
+            finalgrade =  finalgrade + C;
+       }
+       else if (grade2.equals ("D"))
+       {
+            finalgrade =  finalgrade + D;
+       }
+       else if (grade2.equals ("F"))
+       {
+            finalgrade =  finalgrade + F;
+       }
+       
+       if (grade3.equals ("A")){
+           finalgrade =  finalgrade + A;
+       } 
+       else if (grade3.equals ("B"))
+       {
+            finalgrade =  finalgrade + B;
+       }
+       else if (grade3.equals ("C"))
+       {
+            finalgrade =  finalgrade + C;
+       }
+       else if (grade3.equals ("D"))
+       {
+            finalgrade =  finalgrade + D;
+       }
+       else if (grade3.equals ("F"))
+       {
+            finalgrade =  finalgrade + F;
+       }
+       
+       if (grade4.equals ("A")){
+           finalgrade =  finalgrade + A;
+       } 
+       else if (grade4.equals ("B"))
+       {
+            finalgrade =  finalgrade + B;
+       }
+       else if (grade4.equals ("C"))
+       {
+            finalgrade =  finalgrade + C;
+       }
+       else if (grade4.equals ("D"))
+       {
+            finalgrade =  finalgrade + D;
+       }
+       else if (grade4.equals ("F"))
+       {
+            finalgrade =  finalgrade + F;
+       }
+       
+       if (grade5.equals ("A")){
+           finalgrade =  finalgrade + A;
+       } 
+       else if (grade5.equals ("B"))
+       {
+            finalgrade =  finalgrade + B;
+       }
+       else if (grade5.equals ("C"))
+       {
+            finalgrade =  finalgrade + C;
+       }
+       else if (grade5.equals ("D"))
+       {
+            finalgrade =  finalgrade + D;
+       }
+       else if (grade5.equals ("F"))
+       {
+            finalgrade =  finalgrade + F;
+       }
+       
+       if (grade6.equals ("A")){
+           finalgrade =  finalgrade + A;
+       } 
+       else if (grade6.equals ("B"))
+       {
+            finalgrade =  finalgrade + B;
+       }
+       else if (grade6.equals ("C"))
+       {
+            finalgrade =  finalgrade + C;
+       }
+       else if (grade6.equals ("D"))
+       {
+            finalgrade =  finalgrade + D;
+       }
+       else if (grade6.equals ("F"))
+       {
+            finalgrade =  finalgrade + F;
+       }
+
+       if (finalgrade < 2.0){
+          System.out.println("Your GPA is: ");
+          System.out.println(finalgrade/6);
+          System.out.println("You did not pass the grade.");
+        } else{
+         System.out.println("You successfully passed the grade!");
+         System.out.println("Your GPA is: ");       
+         System.out.println(finalgrade/6);
+        }
+        
+    }
+    
+    
+       System.out.println("Give me your favourite number");
+       String answer = kb.nextLine();
+      int num = Integer.parseInt(answer);
+      if ((num%5)==0){
+          System.out.println("This number is a multiple of 5.");
+        }else{
+          System.out.println("Your number is not a multiple of 5");
+        }
+        
+        
+    System.out.print("What is your favourite button on the Keyboard");
+    String thing = kb.nextLine();
+    char things = thing.charAt(0);
+    System.out.println("oh I have never seen this one");
+    
+    System.out.println("Give me a number");
+    String num1 = kb.nextLine();
+    int num2 = Integer.parseInt(num1);
+    
+    System.out.println("Give me another number");
+    String num3 = kb.nextLine();
+    int num4 = Integer.parseInt(num3);
+    
+    int final1 = num2 * num4;
+    System.out.println("these two numbers multiplied are " + final1);
+    double final2 = num2 / num4;
+    System.out.println("these two numbers divided are " + final2);
+    
+    System.out.println("Thank you for chatting with Chat Bot");
+}
+}
